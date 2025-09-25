@@ -232,9 +232,6 @@ const List = () => {
             <span className="system-xs-regular">{t('app.newApp.dropDSLToCreateApp')}</span>
           </div>
         )}
-        {!systemFeatures.branding.enabled && (
-          <Footer />
-        )}
         <CheckModal />
         <div ref={anchorRef} className='h-0'> </div>
         {showTagManagementModal && (
