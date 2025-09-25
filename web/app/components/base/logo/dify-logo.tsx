@@ -2,7 +2,6 @@
 import type { FC } from 'react'
 import classNames from '@/utils/classnames'
 import useTheme from '@/hooks/use-theme'
-import { basePath } from '@/utils/var'
 export type LogoStyle = 'default' | 'monochromeWhite'
 
 export const logoPathMap: Record<LogoStyle, string> = {
@@ -30,14 +29,20 @@ const DifyLogo: FC<DifyLogoProps> = ({
   className,
 }) => {
   const { theme } = useTheme()
-  const themedStyle = (theme === 'dark' && style === 'default') ? 'monochromeWhite' : style
+  const textColor = theme === 'dark' ? 'text-white' : 'text-primary-500'
+
+  const sizeClasses = {
+    large: 'text-2xl',
+    medium: 'text-xl',
+    small: 'text-base',
+  }
 
   return (
-    <img
-      src={`${basePath}${logoPathMap[themedStyle]}`}
-      className={classNames('block object-contain', logoSizeMap[size], className)}
-      alt='Dify logo'
-    />
+    <span
+      className={classNames('font-bold', textColor, sizeClasses[size], className)}
+    >
+      The bridge
+    </span>
   )
 }
 
