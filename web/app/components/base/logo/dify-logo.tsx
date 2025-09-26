@@ -41,7 +41,7 @@ const DifyLogo: FC<DifyLogoProps> = ({
     <span
       className={classNames('font-bold', textColor, sizeClasses[size], className)}
     >
-      The bridge
+      ixi-bridge
     </span>
   )
 }

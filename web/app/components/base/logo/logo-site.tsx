@@ -11,9 +11,14 @@ const LogoSite: FC<LogoSiteProps> = ({
 }) => {
   return (
     <span
+      className={classNames('text-lg font-bold text-primary-900', className)}
+    >
+      ixi
+    </span>
+    <span
       className={classNames('text-lg font-bold text-primary-500', className)}
     >
-      The bridge
+      bridge
     </span>
   )
 }
